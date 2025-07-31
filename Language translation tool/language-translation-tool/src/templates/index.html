@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translation Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Translation Tool</h1>
+        <form id="translation-form">
+            <textarea id="input-text" placeholder="Enter text to translate..." required></textarea>
+            <div class="language-selection">
+                <select id="source-language" required>
+                    <option value="">Select Source Language</option>
+                    <!-- Add language options here -->
+                </select>
+                <select id="target-language" required>
+                    <option value="">Select Target Language</option>
+                    <!-- Add language options here -->
+                </select>
+            </div>
+            <button type="submit">Translate</button>
+        </form>
+        <div id="translated-text" class="translated-text"></div>
+        <button id="copy-button">Copy</button>
+        <button id="speak-button">Speak</button>
+    </div>
+    <script>
+        document.getElementById('translation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add AJAX call to send data to the backend and get the translated text
+        });
+
+        document.getElementById('copy-button').addEventListener('click', function() {
+            // Add functionality to copy translated text to clipboard
+        });
+
+        document.getElementById('speak-button').addEventListener('click', function() {
+            // Add functionality to trigger text-to-speech
+        });
+    </script>
+</body>
+</html>
